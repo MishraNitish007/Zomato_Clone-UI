@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    .nav{
+      position: absolute; 
+      top: 0;
+       right: 0 ;
+       color: aliceblue;
+    }
+    .nav1{
+      margin-top: 10px;
+      margin-right: 5px;
+      padding: 5px;
+    }
+    .nav2{
+      margin-top: 10px;
+      margin-right: 40px;
+      padding: 5px;
+      border: 1px solid white;
+    }
+    
+    .nav2:hover{
+      background-color: red;
+      border-radius: 5px;
+    
+    
+    }
+    
+    .logo {
+        text-align: center;
+        font-size: 70px;
+        color: red;
+        background: white;
+        width: 105px;
+        height: 113px;
+        border-radius: 50%;
+        position: absolute;
+        top: 20%;
+        margin-left: 45%;
+        font-family: Poppins;
+        font-weight: bold;
+       
+      }
+     
+    
+    
+    
+      .headings {
+        color: white;
+        text-align: center;
+        font-size: 18px;
+        font-weight: normal;
+        position: relative;
+        margin: auto;
+        font-size: 36px;
+        top: -200px;
+      }
+      .locationSelector {
+        position: relative;
+        top: 5px;
+        /* margin-left: 25.5%; */
+        /* margin-right: 20%; */
+        text-align: center;
+        display: flex;
+        justify-content: center;
+      }
+    
+      .locationDropdown {
+        /* top: -160px; */
+        height: 40px;
+        width:255px;
+        color: gray;
+        border: none;
+        /* border-radius: 0px; */
+        font-size: 15px;
+        opacity: 0.9;
+        margin-right: 30px;
+        /* margin-bottom: 25px;    */
+        /* float: left; */
+      }
+    
+      .restaurantsinput {
+        /* top: -160px; */
+        height: 40px;
+        width: 370px;
+        color: gray;
+        border: none;
+        border-radius: 0px;
+        font-size: 15px;
+        opacity: 0.9;
+        /* float: left; */
+        padding-left: 30px;
+      }
+    /* 
+     #clear{
+      clear: both;
+     } */
+     header{
+      height: 500px;
+      background-image: url('./Image2/homepageimg1.png');
+     }
+    
+     .heading2{
+      margin-top: 40px;
+      color: #192f60;
+      font-size: 25px;
+      font-weight: bold;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      padding: 5px;
+      margin-left: 65px;
+    
+     }
+     .head1{
+      margin: 5px;
+      padding: 5px;
+      margin-left: 65px;
+      color: gray;
+      font-size: 35px;
+      font-weight: normal;
+      font-family: Georgia, "Times New Roman", Times, serif;
+     }
+    
+    
+    .GridHead{
+      color: #192f60;
+      font-size: 15px;
+      font-weight: bold;
+      font-family: Georgia, "Times New Roman", Times, serif;
+    
+    }
+    
+    .container{
+      margin-bottom: 40px;
+    }
+    
+    .row2{
+      margin-top: 10px;
+    }
+    
+     .card:hover{
+      transform: scale(1.05);
+      transition: transform .3s ease-out;
+      box-shadow: 2px 2px lightgray;
+    }
+    
+     .container11{
+      display: inline-flex;
+       flex:  1 1 100px; 
+    
+    }  
+     .icon{
+      padding:0.5rem;
+    }
+    .searchBox{
+      border: 0;
+      flex: 1;
+      font-size: 10px;
+      padding: 0 10px;
+      outline: 0px;
+      height: 40px;
+      opacity: 0.9;
+      width: 270px; 
+      margin-left: 5px;
+    
+    }
+     .container11 img{
+      background-color: white;
+      height: 40px;
+      opacity: 0.9; 
+      
+    
+    }  
+    
+    #logodiv{
+      background-color: white;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+    #logo{
+      color: red;
+      font-size: 4rem;
+      font-weight: 600;
+      font-family: Poppins;
+    }
+    
+    .text-center{
+      color: white;
+    
+    
+    }
