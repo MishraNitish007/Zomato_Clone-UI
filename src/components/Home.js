@@ -42,7 +42,8 @@ componentDidMount() {
 
   render() {
     const { location, mealType } = this.state;
-    // console.log(location)
+    // console.log(mealType)
+    
     return (
       <div>
         <WallpaperComponent locationdata ={location} />

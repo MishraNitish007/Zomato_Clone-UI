@@ -30,7 +30,7 @@ export class WallpaperComponent extends Component {
 
     handleSearch = (event) => {
         const { restaurants } = this.state;
-        console.log(restaurants)
+        // console.log(restaurants)
         // console.log(restaurants);
         const searchText = event.target.value;
         let filteredList;
@@ -39,7 +39,7 @@ export class WallpaperComponent extends Component {
         } else {
             filteredList = restaurants.restaurantList.filter((item) => {
                 return item.name.toLowerCase().includes(searchText.toLowerCase());
-            })
+            }) 
         }
         this.setState({ suggestions: filteredList, searchText: searchText });
     }
@@ -60,7 +60,7 @@ export class WallpaperComponent extends Component {
         return (
             <ul className="unorderedList" style={{ color: "white" }}>
                 {suggestions && suggestions.map((item, index) => {
-                    return <li key={index} onClick={() => this.handleRestaurantClick(item)} ><img src={`${item.thumb}`} className="resIcon" />{`${item.name}, ${item.city}`}</li>
+                    return <li className='ListofRes' key={index} onClick={() => this.handleRestaurantClick(item)} ><img src={`${item.thumb}`} className="resIcon" alt="" />{`${item.name}, ${item.city}`}</li>
                 })}
             </ul> 
         )
@@ -91,7 +91,7 @@ export class WallpaperComponent extends Component {
 
                                 <nav className="navbar navbar-light ">
                                     <div className="container">
-                                        <a className="navbar-brand"></a>
+                                        <div className="navbar-brand"></div>
                                         <form className="d-flex">
                                             <button type="button" className="btn btn-outline-info mx-4">login</button>
                                             <button className="btn btn-outline-danger" type="submit">Create an account</button>
@@ -129,8 +129,8 @@ export class WallpaperComponent extends Component {
                                             <div className="   col-md-8 col-sm-10 offset-sm-1 offset-md-0 col-10 offset-1">
                                                 <div className="container11">
                                                     {/* <img src={require('./Image2/search.svg')} alt="search" className="icon" width="32px" height="32px" /> */}
-                                                    <input type="search" name="search" className="searchBox" placeholder="Enter Your location"   onChange={this.handleSearch}/>
-                                                     {this.renderSuggestions()}
+                                                    <input type="search" name="search" className="searchBox" placeholder="Enter Your location"    onChange={this.handleSearch}/>
+                                                    {this.renderSuggestions()}
 
                                                 </div>
                                             </div>
