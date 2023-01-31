@@ -40,7 +40,7 @@ export class QuickSearchComponent extends Component {
                                         </div>
                                     </div>
 
-                                })}
+                                })} 
 
                         </div>
                     </div>
