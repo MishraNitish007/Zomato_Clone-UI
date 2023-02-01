@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import './filter.css';
 // import { Link } from "react-router-dom"
-// import { withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import queryString from 'query-string';
 
 class FilterRestaurants extends React.Component
@@ -25,7 +25,7 @@ class FilterRestaurants extends React.Component
     componentDidMount()
     {
         // Capturing values from Query String
-        const qs = queryString.parse(this.props.location.search);
+        const qs = queryString.parse(this.props?.location?.search);
         const location = qs.location;
         const mealTypeId=qs.mealtype;
 
@@ -47,7 +47,7 @@ class FilterRestaurants extends React.Component
                 method: 'GET',
                 url: 'http://localhost:6503/api/cityList',
                 headers: {'Content-Type' : 'application/json' }
-            }).then(response => this.setState( { locations : response.data.cities } )).catch()
+            }).then(response => this.setState( { locations : response.data } )).catch()
     }
 
     handleSortChange = (sort) =>
@@ -138,7 +138,7 @@ class FilterRestaurants extends React.Component
     render ()
     {
         const { resturants ,locations} = this.state;
-        // console.log(resturants)
+        console.log(resturants)
         // console.log(locations)
 
         return (
@@ -166,7 +166,7 @@ class FilterRestaurants extends React.Component
                                             <div>
                                                 <select className="Filterdropdown" onChange={this.handleLocationChange}>
                                                         <option style={{color: '#8c96ab'}} value="0">Select</option>
-                                                            { locations.map((item) => {
+                                                            {locations.city && locations.city.map((item) => {
                                                                 return <option value={item.city_id} >{ `${item.name}, ${item.city}`  }</option>
                                                              }) } 
                                                 </select>
@@ -226,11 +226,11 @@ class FilterRestaurants extends React.Component
                                         </div>
                                 <div className="col-sm-8 col-md-8 col-lg-8">
                                     {resturants && resturants.length > 0 ? resturants.map(item => {
-                                        return <div className="FilterItems" onClick={() => this.handleNextPage(item._id)}>
+                                        return <div className="FilterItems" onClick={() => this.handleNextPage(item.city_id)}>
                                         <img src={item.image} className="FilterPic1"/>
                                         <div className="FilterTheBigChill">{item.name}</div>
                                         <div className="FilterFort">{item.locality}</div>  
-                                        <div className="FilterAddress">{item.locality}, {item.city}</div>
+                                        <div className="FilterAddress">{item.locality}, {item.name}</div>
                                         <div><hr/></div>
                                         <div className="FilterCUISINES">CUISINES: </div>
                                         <div className="FilterCOSTFORTWO">COST FOR TWO: </div>
